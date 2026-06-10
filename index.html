@@ -5,191 +5,253 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporate Readiness & AI Mastery Hub</title>
     <style>
-        /* Premium Dark Corporate Color Palette */
+        /* Premium Executive Color Palette */
         :root {
-            --bg-main: #0B0F19;      /* Deep Midnight Blue/Black */
-            --bg-card: #1E2640;      /* Slate Grey/Blue Card Background */
-            --text-main: #F3F4F6;    /* Off-White Clean Text */
-            --text-muted: #9CA3AF;   /* Light Slate Muted Text */
-            --accent-glow: #3B82F6;  /* Electric Blue Accent */
-            --accent-success: #10B981;/* Vibrant Emerald Green */
-            --accent-fail: #EF4444;   /* Crimson Red */
+            --bg-deep: #0A0E17;       /* Velvet Obsidian Black */
+            --bg-surface: #131A2C;    /* Deep Navy Card Surface */
+            --accent-gold: #D4AF37;   /* Champagne Gold Accents */
+            --accent-blue: #3B82F6;   /* Tech Electric Blue */
+            --text-light: #F3F4F6;    /* Off-White Text */
+            --text-muted: #9CA3AF;    /* Slate Grey Subtext */
+            --alert-red: #EF4444;     /* Crimson */
+            --alert-green: #10B981;   /* Emerald */
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-light);
+            line-height: 1.7;
             margin: 0;
             padding: 0;
         }
 
-        /* Hero Banner Section */
-        .hero {
-            background: linear-gradient(135deg, #111827 0%, #1E3A8A 100%);
+        /* Premium Executive Header */
+        header {
+            background: linear-gradient(135deg, #070A10 0%, #111B30 100%);
             padding: 5rem 2rem;
             text-align: center;
-            border-bottom: 3px solid var(--accent-glow);
+            border-bottom: 2px solid var(--accent-gold);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0 0 1rem 0;
-            letter-spacing: -0.05em;
+        header h1 {
+            font-size: 2.8rem;
+            color: #FFFFFF;
+            margin: 0 0 0.5rem 0;
             font-weight: 800;
+            letter-spacing: -0.03em;
         }
 
-        .hero p {
+        header .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        header .meta-tag {
             color: var(--text-muted);
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
+            font-size: 0.95rem;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 4rem 1.5rem;
         }
 
-        /* Notion Callout Box Design */
-        .callout {
-            background-color: var(--bg-card);
-            border-left: 4px solid var(--accent-glow);
-            padding: 1.5rem;
+        /* Notion-Style Premium Callout Box */
+        .notion-callout {
+            background-color: var(--bg-surface);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1.5rem 2rem;
             border-radius: 8px;
-            font-size: 1.15rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Responsive Video Window Framework */
-        .video-window {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            margin-bottom: 3rem;
-            border: 2px solid #2D3748;
-        }
-
-        .video-window iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Grid Layout for Training Modules */
-        .grid {
+        /* Professional Showcase Image Grid */
+        .image-banner {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
-        @media(min-width: 768px) {
+        @media (min-width: 768px) {
+            .image-banner { grid-template-columns: 1fr 1fr; }
+        }
+
+        .showcase-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+
+        /* Custom Local Video Player Frame */
+        .video-container {
+            background-color: var(--bg-surface);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        video {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+            background-color: #000;
+        }
+
+        /* Curriculum & Column Grid */
+        h2 {
+            font-size: 2rem;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
             .grid { grid-template-columns: 1fr 1fr; }
         }
 
         .card {
-            background-color: var(--bg-card);
-            padding: 2rem;
+            background-color: var(--bg-surface);
+            padding: 2.2rem;
             border-radius: 10px;
-            border: 1px solid #2D3748;
-            transition: transform 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-glow);
+            border: 1px solid #1E293B;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .card h3 {
             margin-top: 0;
-            color: var(--text-main);
-            border-bottom: 1px solid #2D3748;
-            padding-bottom: 0.5rem;
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+
+        .card li {
+            margin-bottom: 0.75rem;
+            color: var(--text-light);
         }
 
         /* Embedded Google Form Section */
-        .form-window {
-            width: 100%;
-            background: white;
+        .form-container {
+            background-color: #FFFFFF;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
             margin-top: 2rem;
         }
 
-        .badge-red { color: var(--accent-fail); font-weight: bold; }
-        .badge-green { color: var(--accent-success); font-weight: bold; }
+        .form-container iframe {
+            width: 100%;
+            display: block;
+        }
+
+        .split-box {
+            background-color: var(--bg-surface);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 4rem;
+        }
+
+        .badge-red { color: var(--alert-red); font-weight: bold; }
+        .badge-green { color: var(--alert-green); font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="hero">
+    <header>
         <h1>Corporate Readiness & AI Mastery Hub</h1>
-        <p>Bridging the Gap Between Academic Principles and Corporate Execution</p>
-    </div>
+        <div class="subtitle">Executive Coaching & Communication Systems</div>
+        <div class="meta-tag">Led by Anoop Jayaprakash (M.Com, UGC-NET) • 15+ Years Academic Leadership</div>
+    </header>
 
     <div class="container">
-        
-        <!-- Notion-Style Top Callout -->
-        <div class="callout">
-            💡 <strong>"The corporate landscape has completely evolved. Are you graduating with the skills companies actually want to hire?"</strong>
+
+        <!-- Notion Quote Callout -->
+        <div class="notion-callout">
+            💡 <strong>"The corporate landscape has completely evolved. Are you graduating with the operational agility and high-stakes presentation loops companies actually scramble to hire?"</strong>
         </div>
 
-        <!-- Video Embed Window with Thumbnail Player -->
-        <h2 style="text-align: center; margin-bottom: 1.5rem;">▶️ Watch the Masterclass Overview</h2>
-        <div class="video-window">
-            <!-- Replace 'YOUR_VIDEO_ID' with your actual YouTube video ending ID -->
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0" allowfullscreen></iframe>
+        <!-- Curated Training Image Showcase Block -->
+        <h2>Executive Training Environment</h2>
+        <div class="image-banner">
+            <!-- Professional Corporate Training Imagery Placeholder Links -->
+            <img class="showcase-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Executive Corporate Seminar Room">
+            <img class="showcase-img" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Advanced Presentation Systems Workspace">
         </div>
 
-        <!-- Core Comparison Section -->
-        <h2>The Skills Gap: College vs. Corporate Reality</h2>
-        <div class="card" style="margin-bottom: 3rem;">
-            <p><span class="badge-red">❌ Traditional College Programs:</span> Focus heavily on rote theory, isolated textbook principles, and memorization.</p>
-            <p><span class="badge-green">✅ Our Campus Intensive Masterclass:</span> Focused entirely on high-impact executive presentation loops, real-world workplace problem solving, and applied AI literacy.</p>
+        <!-- HTML5 Local Video Frame with Custom Thumbnail Image Cover -->
+        <h2>▶️ Masterclass Briefing Loop</h2>
+        <div class="video-container">
+            <!-- Replace 'intro-video.mp4' with your actual uploaded video file name -->
+            <!-- Replace 'poster-thumbnail.jpg' with an uploaded cover picture file name -->
+            <video controls poster="poster-thumbnail.jpg">
+                <source src="intro-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
-        <!-- Notion Curriculum Modules Structured Cleanly -->
-        <h2>The Masterclass Curriculum</h2>
+        <!-- Strategic Positioning Block -->
+        <h2>The Core Operational Gap</h2>
+        <div class="split-box">
+            <p><span class="badge-red">❌ Traditional Higher Education Focus:</span> Heavy emphasis on rote theoretical concepts, passive textbook comprehension, and standardized academic evaluations.</p>
+            <p><span class="badge-green">✅ Our Premium Campus Intensive:</span> Direct focus on executive presentation systems, leveraging conversational frameworks, and utilizing functional Artificial Intelligence automation tools[cite: 1].</p>
+        </div>
+
+        <!-- Modern Curriculum Matrix -->
+        <h2>The Masterclass Curriculum Matrix</h2>
         <div class="grid">
             <div class="card">
-                <h3>📋 Module 1: Advanced Corporate Communication</h3>
+                <h3>📋 Advanced Executive Communication</h3>
                 <ul>
-                    <li>Master clear and concise professional emailing.</li>
-                    <li>Structure confident corporate presentations.</li>
-                    <li>Practice active listening in fast-paced teams.</li>
-                    <li>Develop high-level executive communication loops.</li>
+                    <li>Mastering the conversational architecture of high-stakes business pitches[cite: 1].</li>
+                    <li>Structuring clear, authoritative corporate briefings and presentation loops[cite: 1].</li>
+                    <li>Overcoming public presentation friction using elite conversational frameworks[cite: 1].</li>
+                    <li>Handling complex cross-departmental and executive-level liaison communications[cite: 1, 2].</li>
                 </ul>
             </div>
             <div class="card">
-                <h3>🤖 Module 2: Applied AI Literacy</h3>
+                <h3>🤖 Applied AI Literacy & Workplace Strategy</h3>
                 <ul>
-                    <li>Learn to safely leverage modern Generative AI ecosystems.</li>
-                    <li>Finish daily office workflows up to 10x faster.</li>
-                    <li>Apply data-driven insights to complex business decisions.</li>
-                    <li>Understand the core ethics of AI usage in modern business.</li>
+                    <li>Integrating generative AI frameworks securely into standard reporting workflows[cite: 1].</li>
+                    <li>Accelerating daily corporate documentation and data insights up to 10x faster[cite: 1].</li>
+                    <li>Fusing professional human communication skills with technical AI assistance[cite: 1].</li>
+                    <li>Developing rapid real-world problem-solving models under tight operational deadlines[cite: 1, 2].</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Interactive Embedded Google Form Window -->
-        <h2 style="text-align: center; margin-top: 4rem;">📝 Complete Your 60-Second Corporate Readiness Audit</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Fill out the live application window below to secure your seat details:</p>
+        <!-- Embedded Google Form Portal Window -->
+        <h2 style="text-align: center; margin-top: 5rem;">📝 Submit Your 60-Second Corporate Readiness Audit</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Secure your seat and register for our upcoming institutional masterclass training below:</p>
         
-        <div class="form-window">
-            <!-- Paste your Google Form EMBED URL link inside the src attribute below -->
-            <iframe src="YOUR_GOOGLE_FORM_EMBED_LINK" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <div class="form-container">
+            <!-- Replace 'YOUR_GOOGLE_FORM_EMBED_LINK' with your actual clean Google Form iframe source URL link -->
+            <iframe src="YOUR_GOOGLE_FORM_EMBED_LINK" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading evaluation portal...</iframe>
         </div>
 
     </div>
