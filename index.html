@@ -3,278 +3,451 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporate Readiness & AI Mastery Hub</title>
+    <title>Corporate Readiness & AI Mastery Hub | Anoop Jayaprakash</title>
     <style>
-        /* Premium Executive Color Palette */
         :root {
             /* Premium Executive Light Theme Palette */
-    --bg-primary: #FAFAFB;      /* Clean, off-white background */
-    --bg-surface: #FFFFFF;      /* Pure white for cards/sections */
-    --text-main: #111827;       /* Deep charcoal/near black for high-readability text */
-    --text-muted: #4B5563;      /* Slate gray for secondary text and subtitles */
-    --accent-gold: #B45309;     /* Deep, sophisticated amber/gold for links/borders */
-    --accent-blue: #1E3A8A;     /* Institutional corporate blue for primary highlights */
-    --border-color: #E5E7EB;    /* Light gray dividing lines */
+            --bg-primary: #FAFAFB;      
+            --bg-surface: #FFFFFF;      
+            --text-main: #111827;       
+            --text-muted: #4B5563;      
+            --accent-gold: #B45309;     
+            --accent-blue: #1E3A8A;     
+            --border-color: #E5E7EB;    
         }
 
         body {
-    background-color: var(--bg-primary);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-/* Update your content cards/boxes to sit beautifully on top of the off-white background */
-.container, .card, .training-box {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-       header {
-    background: linear-gradient(135deg, rgba(11, 15, 26, 0.85) 0%, rgba(17, 27, 48, 0.75) 100%), 
-                url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    padding: 7.5rem 2rem;
-    text-align: center;
-    border-bottom: 3px solid var(--accent-gold);
-}
-
-/* Force header text to stay bright and readable over the dark header image */
-header h1 {
-    color: #FFFFFF !important;
-}
-header .subtitle {
-    color: #FBBF24 !important; /* Brighter gold for dark background visibility */
-}
-header .meta-tag {
-    color: #E5E7EB !important;
-}
-}
-
-        header h1 {
-            font-size: 2.8rem;
-            color: #FFFFFF;
-            margin: 0 0 0.5rem 0;
-            font-weight: 800;
-            letter-spacing: -0.03em;
+        /* Crown Area - Elegant Light Overlay Showcase */
+        header {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 244, 248, 0.92) 100%), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 6.5rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent-gold);
         }
 
         header .subtitle {
-            color: var(--accent-gold);
-            font-size: 1.3rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
+            color: var(--accent-blue);
+            font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        header h1 {
+            color: var(--text-main);
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin: 0 auto 1.25rem auto;
+            max-width: 900px;
+            line-height: 1.2;
         }
 
         header .meta-tag {
             color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .container {
-            max-width: 950px;
+            font-size: 1.15rem;
+            font-weight: 500;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 4rem 1.5rem;
+            line-height: 1.5;
         }
 
-        /* Notion-Style Premium Callout Box */
-        .notion-callout {
-            background-color: var(--bg-surface);
-            border-left: 4px solid var(--accent-gold);
-            padding: 1.5rem 2rem;
+        header .meta-tag span {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Strategic Intro Hook Section */
+        .intro-container {
+            max-width: 900px;
+            margin: -2.5rem auto 3rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .intro-box {
+            background: var(--bg-surface);
+            border-left: 5px solid var(--accent-gold);
+            padding: 2rem;
             border-radius: 8px;
-            font-size: 1.2rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            text-align: center;
         }
 
-        /* Professional Showcase Image Grid */
-        .image-banner {
+        .intro-box p {
+            color: var(--text-main);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Image Display Row Layout */
+        .image-gallery {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
 
-        @media (min-width: 768px) {
-            .image-banner { grid-template-columns: 1fr 1fr; }
+        .gallery-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
         }
 
-        .showcase-img {
+        .gallery-card img {
             width: 100%;
             height: 280px;
             object-fit: cover;
-            border-radius: 10px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-        }
-
-        /* Custom Local Video Player Frame */
-        .video-container {
-            background-color: var(--bg-surface);
-            border: 2px solid rgba(212, 175, 55, 0.3);
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 4rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-        }
-
-        video {
-            width: 100%;
-            border-radius: 8px;
             display: block;
-            background-color: #000;
         }
 
-        /* Curriculum & Column Grid */
-        h2 {
+        /* Value Framework Matrix Section */
+        .framework-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .framework-section h2 {
+            text-align: center;
+            color: var(--text-main);
             font-size: 2rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-            color: #FFFFFF;
+            margin-bottom: 2.5rem;
+            font-weight: 800;
         }
 
-        .grid {
+        .matrix-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 2rem;
-            margin-bottom: 4rem;
         }
 
-        @media (min-width: 768px) {
-            .grid { grid-template-columns: 1fr 1fr; }
+        .matrix-box {
+            padding: 2rem;
+            border-radius: 8px;
         }
 
-        .card {
-            background-color: var(--bg-surface);
-            padding: 2.2rem;
-            border-radius: 10px;
-            border: 1px solid #1E293B;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        .matrix-box.traditional {
+            background-color: #F9FAFB;
+            border-left: 4px solid #9CA3AF;
         }
 
-        .card h3 {
+        .matrix-box.intensive {
+            background-color: #EFF6FF;
+            border-left: 4px solid var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(30, 58, 138, 0.04);
+        }
+
+        .matrix-box h3 {
             margin-top: 0;
-            color: var(--accent-gold);
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-bottom: 1rem;
         }
 
-        .card ul {
-            padding-left: 1.2rem;
+        .matrix-box p {
             margin: 0;
+            line-height: 1.6;
         }
 
-        .card li {
-            margin-bottom: 0.75rem;
-            color: var(--text-light);
+        /* Deep Descriptive Pillars (Cards Section) */
+        .pillars-section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
         }
 
-        /* Embedded Google Form Section */
-        .form-container {
-            background-color: #FFFFFF;
+        .pillar-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+        }
+
+        .pillar-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .pillar-card h3 {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+        }
+
+        .pillar-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .pillar-list {
+            padding-left: 1.25rem;
+            margin: 0;
+            color: #374151;
+            line-height: 1.8;
+        }
+
+        .pillar-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Premium Video Theatre Interface */
+        .video-section {
+            max-width: 900px;
+            margin: 5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .video-theatre {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-            margin-top: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        .video-top-bar {
+            background: var(--accent-blue);
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .video-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .video-badge {
+            background: rgba(255, 255, 255, 0.18);
+            color: #FFFFFF;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+
+        .video-screen {
+            background: #0B0F1A;
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-wrapper {
+            width: 100%;
+            max-width: 820px;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: #000000;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-footer {
+            background: #F9FAFB;
+            padding: 1.25rem 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .video-footer p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Lead Registration Frame Section */
+        .registration-section {
+            max-width: 900px;
+            margin: 4rem auto 6rem auto;
+            padding: 0 1.5rem;
+            text-align: center;
+        }
+
+        .registration-section p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .form-container {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
 
         .form-container iframe {
             width: 100%;
+            border: none;
             display: block;
         }
 
-        .split-box {
-            background-color: var(--bg-surface);
-            padding: 2rem;
-            border-radius: 10px;
-            margin-bottom: 4rem;
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .image-gallery, .matrix-grid, .pillars-section {
+                grid-template-columns: 1fr;
+            }
+            header { padding: 4rem 1rem; }
         }
-
-        .badge-red { color: var(--alert-red); font-weight: bold; }
-        .badge-green { color: var(--alert-green); font-weight: bold; }
     </style>
 </head>
 <body>
 
+    <!-- Header / Crown Section -->
     <header>
-        <h1>Corporate Readiness & AI Mastery Hub</h1>
-        <div class="subtitle">Executive Coaching & Communication Systems</div>
-        <div class="meta-tag">Led by Sucess Team </div>
+        <div class="subtitle">Masterclass & Executive Coaching System</div>
+        <h1>Bridging Corporate Presentation Mastery with Practical AI Strategy</h1>
+        <div class="meta-tag">
+            Led by <span>Anoop Jayaprakash</span> • UGC-NET Certified Postgraduate with 15+ Years of Academic Leadership & Communication Expertise
+        </div>
     </header>
 
-    <div class="container">
-
-        <!-- Notion Quote Callout -->
-        <div class="notion-callout">
-            💡 <strong>"The corporate landscape has completely evolved. Are you graduating with the operational agility and high-stakes presentation loops companies actually scramble to hire?"</strong>
+    <!-- Callout Hook Message -->
+    <div class="intro-container">
+        <div class="intro-box">
+            <p>"The corporate landscape has completely evolved. Are you graduating with the operational agility and high-stakes presentation loops companies actually scramble to hire?"</p>
         </div>
-
-        <!-- Curated Training Image Showcase Block -->
-        <h2>Executive Training Environment</h2>
-        <div class="image-banner">
-            <!-- Professional Corporate Training Imagery Placeholder Links -->
-            <img class="showcase-img" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" alt="Executive Corporate Seminar Room">
-            <img class="showcase-img" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Advanced Presentation Systems Workspace">
-        </div>
-
-        <!-- HTML5 Local Video Frame with Custom Thumbnail Image Cover -->
-        <h2>▶️ Masterclass Briefing Loop</h2>
-        <div class="video-container">
-            <!-- Replace 'intro-video.mp4' with your actual uploaded video file name -->
-            <!-- Replace 'poster-thumbnail.jpg' with an uploaded cover picture file name -->
-            <video controls poster="poster-thumbnail.jpg">
-                <source src="intro-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-
-        <!-- Strategic Positioning Block -->
-        <h2>The Core Operational Gap</h2>
-        <div class="split-box">
-            <p><span class="badge-red">❌ Traditional Higher Education Focus:</span> Heavy emphasis on rote theoretical concepts, passive textbook comprehension, and standardized academic evaluations.</p>
-            <p><span class="badge-green">✅ Our Premium Campus Intensive:</span> Direct focus on executive presentation systems, leveraging conversational frameworks, and utilizing functional Artificial Intelligence automation tools.</p>
-        </div>
-
-        <!-- Modern Curriculum Matrix -->
-        <h2>The Masterclass Curriculum Matrix</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>📋 Advanced Executive Communication</h3>
-                <ul>
-                    <li>Mastering the conversational architecture of high-stakes business pitches[cite: 1].</li>
-                    <li>Structuring clear, authoritative corporate briefings and presentation loops[cite: 1].</li>
-                    <li>Overcoming public presentation friction using elite conversational frameworks[cite: 1].</li>
-                    <li>Handling complex cross-departmental and executive-level liaison communications[cite: 1, 2].</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>🤖 Applied AI Literacy & Workplace Strategy</h3>
-                <ul>
-                    <li>Integrating generative AI frameworks securely into standard reporting workflows[cite: 1].</li>
-                    <li>Accelerating daily corporate documentation and data insights up to 10x faster[cite: 1].</li>
-                    <li>Fusing professional human communication skills with technical AI assistance[cite: 1].</li>
-                    <li>Developing rapid real-world problem-solving models under tight operational deadlines[cite: 1, 2].</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Embedded Google Form Portal Window -->
-        <h2 style="text-align: center; margin-top: 5rem;">📝 Submit Your 60-Second Corporate Readiness Audit</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">Secure your seat and register for our upcoming institutional masterclass training below:</p>
-        
-        <div class="form-container">
-            <!-- Replace 'YOUR_GOOGLE_FORM_EMBED_LINK' with your actual clean Google Form iframe source URL link -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdczUNtx-O3Gr3mMvJ_EZTqWMG0OhxTZJThdXDMw9HYYlKUuw/viewform?embedded=true" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading evaluation portal...</iframe>
-        </div>
-
     </div>
+
+    <!-- Multi-Aspect Image Row Section -->
+    <div class="image-gallery">
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="Executive Presentation Session">
+        </div>
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Applied Workspace Analytics">
+        </div>
+    </div>
+
+    <!-- Core Value Matrix Component -->
+    <section class="framework-section">
+        <h2>Why This Intensive Matters: The Shift in Executive Expectation</h2>
+        <div class="matrix-grid">
+            <div class="matrix-box traditional">
+                <h3 style="color: #374151;">✕ The Traditional Higher Education Baseline</h3>
+                <p style="color: #6B7280;">Standard academic tracks focus heavily on passive textbook comprehension, static rote theoretical concepts, and standardized testing loops. While building fundamental knowledge, it leaves emerging professionals highly vulnerable to public presentation friction and corporate workflow isolation.</p>
+            </div>
+            <div class="matrix-box intensive">
+                <h3 style="color: var(--accent-blue);">✓ Our Premium Campus Intensive</h3>
+                <p style="color: #1F2937; font-weight: 500;">An immersive, results-focused laboratory engineered to instill executive presentation systems, command room conversational frameworks, and functional, day-to-day Artificial Intelligence automation tools designed to multiply workflow speed up to 10x.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Curated Pillars Section -->
+    <section class="pillars-section">
+        <!-- Pillar 1: Advanced Executive Communication -->
+        <div class="pillar-card">
+            <div class="pillar-icon" style="background: #FEF3C7; color: #D97706;">📋</div>
+            <h3>Advanced Executive Communication</h3>
+            <p>Mastering the foundational conversational architecture required to navigate high-stakes business environments and executive-level liaison communications flawlessly[cite: 1, 2].</p>
+            <ul class="pillar-list">
+                <li><strong>High-Stakes Pitching:</strong> Structure clean, authoritative corporate briefings that captivate stakeholders instantly[cite: 1].</li>
+                <li><strong>Friction Elimination:</strong> Overcome public presentation anxieties using targeted, elite conversational frameworks[cite: 1].</li>
+                <li><strong>Strategic Dialogue:</strong> Navigate complex cross-departmental coordination with professional clarity and absolute discretion[cite: 1, 2].</li>
+            </ul>
+        </div>
+
+        <!-- Pillar 2: Applied AI Literacy -->
+        <div class="pillar-card">
+            <div class="pillar-icon" style="background: #DBEAFE; color: #2563EB;">🤖</div>
+            <h3>Applied AI Literacy & Workplace Strategy</h3>
+            <p>Transforming technical potential into everyday operational mastery by integrating secure generative frameworks seamlessly into existing document loops[cite: 1].</p>
+            <ul class="pillar-list">
+                <li><strong>Workflow Optimization:</strong> Securely embed AI assistance to compile reports and crunch data loops up to 10x faster[cite: 1].</li>
+                <li><strong>The Human-AI Edge:</strong> Fuse classic, persuasive communication mechanics with technical prompt engineering tools[cite: 1].</li>
+                <li><strong>Rapid Problem-Solving:</strong> Build functional models to address urgent, shifting real-world operational bottlenecks[cite: 1, 2].</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Video Theatre Preview Window -->
+    <section class="video-section">
+        <div class="video-theatre">
+            <div class="video-top-bar">
+                <div class="video-title">
+                    <span>🎬</span> Inside the Masterclass System: Core Presentation Dynamics
+                </div>
+                <div class="video-badge">Video Preview</div>
+            </div>
+            <div class="video-screen">
+                <div class="video-wrapper">
+                    <!-- Target Embed Element -->
+                    <video controls poster="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80">
+                        <source src="YOUR_VIDEO_URL_HERE" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="video-footer">
+                <p>Watch this brief breakdown to see how our presentation systems directly reverse common corporate communication friction.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Link Frame Section -->
+    <section class="registration-section">
+        <h2>Secure Your Seat and Register</h2>
+        <p>Secure your seat and register for our upcoming institutional masterclass training below:</p>
+        <div class="form-container">
+            <!-- Embedded Google Diagnostic Assessment Form Grid -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScP_Z_D2-T-T_I8m6n8p1mOunpX86SgUOXuL14V_4v_4v_4vA/viewform?embedded=true" height="900">
+                Loading…
+            </iframe>
+        </div>
+    </section>
 
 </body>
 </html>
