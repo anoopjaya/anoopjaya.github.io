@@ -7,34 +7,50 @@
     <style>
         /* Premium Executive Color Palette */
         :root {
-            --bg-deep: #0A0E17;       /* Velvet Obsidian Black */
-            --bg-surface: #131A2C;    /* Deep Navy Card Surface */
-            --accent-gold: #D4AF37;   /* Champagne Gold Accents */
-            --accent-blue: #3B82F6;   /* Tech Electric Blue */
-            --text-light: #F3F4F6;    /* Off-White Text */
-            --text-muted: #9CA3AF;    /* Slate Grey Subtext */
-            --alert-red: #EF4444;     /* Crimson */
-            --alert-green: #10B981;   /* Emerald */
+            /* Premium Executive Light Theme Palette */
+    --bg-primary: #FAFAFB;      /* Clean, off-white background */
+    --bg-surface: #FFFFFF;      /* Pure white for cards/sections */
+    --text-main: #111827;       /* Deep charcoal/near black for high-readability text */
+    --text-muted: #4B5563;      /* Slate gray for secondary text and subtitles */
+    --accent-gold: #B45309;     /* Deep, sophisticated amber/gold for links/borders */
+    --accent-blue: #1E3A8A;     /* Institutional corporate blue for primary highlights */
+    --border-color: #E5E7EB;    /* Light gray dividing lines */
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--bg-deep);
-            color: var(--text-light);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-        header {
-    background: linear-gradient(135deg, rgba(11, 15, 26, 0.6) 0%, rgba(17, 27, 48, 0.5) 100%), 
-                url(https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+/* Update your content cards/boxes to sit beautifully on top of the off-white background */
+.container, .card, .training-box {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+       header {
+    background: linear-gradient(135deg, rgba(11, 15, 26, 0.85) 0%, rgba(17, 27, 48, 0.75) 100%), 
+                url('https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1920&q=80');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    padding: 7rem 2rem;
+    padding: 7.5rem 2rem;
     text-align: center;
-    border-bottom: 2px solid var(--accent-gold);
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+/* Force header text to stay bright and readable over the dark header image */
+header h1 {
+    color: #FFFFFF !important;
+}
+header .subtitle {
+    color: #FBBF24 !important; /* Brighter gold for dark background visibility */
+}
+header .meta-tag {
+    color: #E5E7EB !important;
 }
 }
 
